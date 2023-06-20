@@ -37,6 +37,13 @@ class RegisterFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+
+        setViewModel()
+        observeStatus()
+
+        binding.registerBtn.setOnClickListener{
+            it.findNavController().navigate(R.id.action_registerFragment_to_loginFragment)
+        }
     }
 
     private fun setViewModel(){
